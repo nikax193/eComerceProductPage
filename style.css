@@ -24,7 +24,7 @@ header {
 }
 
 .header-content h1 {
-    margin: 0;
+    margin: 0 0 0 -100px;
     flex-grow: 1;
 }
 
@@ -51,13 +51,23 @@ nav ul li a:hover {
 }
 
 .cart-icon {
-    display: flex;
-    align-items: center;
+    position: relative;
+    margin-left: 450px;
+    margin-top: -22px;
+    cursor: pointer;
 }
 
 .cart-icon img {
     width: 30px;
-    height: auto;
+    height: 30px;
+    border-radius: 20px ;
+    object-fit: contain;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cart-icon:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
 }
 
 
@@ -69,7 +79,7 @@ nav ul li a:hover {
 }
 
 .product {
-    background-color: white;
+    background-color: rgb(181, 237, 203);
     margin: 10px;
     padding: 20px;
     width: calc((100% / 3) - 40px);
